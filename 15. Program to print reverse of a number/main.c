@@ -9,12 +9,15 @@
 
 int main()
 {
-    int x,y,reverse=0;
+    int n,x,reverse=0;
     printf("Enter a number you wanna reverse:");
-    scanf("%d",&x);
-    
-    
+    scanf("%d",&n);
+    x=n;
+    while(n>0){
+        int rem = n%10;
+        reverse = reverse*10 + rem;
+        n=n/10;
     }
-    
+    printf("The reverse of %d is %d .",x,reverse);
     return 0;
 }
